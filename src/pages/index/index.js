@@ -124,9 +124,7 @@ export default class Index extends Component {
   componentDidShow () { }
 
   componentDidHide () { }
-  navigateTo(url) {
-    Taro.navigateTo({url:url})
-  }
+  
   updateList() {
     console.log("test");
   }
@@ -154,43 +152,7 @@ export default class Index extends Component {
           </View>
         </View>
         {this.state.list.map((item,index)=>{
-          return(
-            <View className="feed-item" key={index}>
-              <View className="feed-source">
-                <View className="avatar flex1">
-                    <Image src={item.feed_source_img}></Image>
-                </View>
-                <View className="flex8">
-                  <Text className="feed-source-txt">{item.feed_source_name}{item.feed_source_txt}</Text>
-                </View>
-                <View className="flex1">
-                  <Image className="item-more" mode="aspectFit" src={more}></Image>
-                </View>
-              </View>
-              <View className="feed-content">
-                  <View className="question" qid="{item.question_id}" onClick={this.navigateTo.bind(this,'/pages/question/question')}>
-                      <View className="question-link">
-                          <Text>{item.question}</Text>
-                      </View>
-                  </View>
-                  <View className="answer-body">
-                      <View>
-                          <Text className="answer-txt" aid="{item.answer_id}" onClick={this.navigateTo.bind(this,'/pages/answer/answer')} >{item.answer_ctnt}</Text>
-                      </View>
-                      <View className="answer-actions">
-                          <View className="like dot">
-                              <View>{item.good_num} 赞同 </View>
-                          </View>
-                          <View className="comments dot">
-                              <View>{item.comment_num} 评论 </View>
-                          </View>
-                          <View className="follow-it">
-                              <View>关注问题</View>
-                          </View>
-                      </View>
-                  </View>
-              </View>
-            </View>)
+          return <Feed {...item} key={index} />
         })}
       </ScrollView>
     )

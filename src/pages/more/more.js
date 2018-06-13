@@ -12,7 +12,7 @@ import livePng from '../../asset/images/live.png'
 import zhiPng from '../../asset/images/zhi.png'
 
 
-export default class Index extends Component {
+export default class More extends Component {
   config = {
     navigationBarTitleText: '我的'
   }
@@ -31,7 +31,7 @@ export default class Index extends Component {
 
   render () {
     return (
-        <View className="container more">
+        <View className="more">
           <View className="user flex-wrp">
             <View className="avatar flex-item">
               <Image className="userinfo-avatar" src={defaultAvatarJpeg} backgroundSize="cover"></Image>

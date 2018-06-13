@@ -12,7 +12,7 @@ import img6 from '../../asset/images/comment.png'
 import img7 from '../../asset/images/icon1.jpeg'
 
 
-export default class Index extends Component {
+export default class Answer extends Component {
   config = {
     navigationBarTitleText: '答案'
   }
@@ -81,7 +81,6 @@ export default class Index extends Component {
               </Text>
               <Image src={img1}></Image>
           </View>
-
           <View className="answer-footer flex-wrp">
               <View className="good flex-item">
                   <View className="good-bad">

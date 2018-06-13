@@ -44,7 +44,7 @@
     height: 90px;
 }
 
-.answerer .avatar image {
+.answerer .avatar image,.answerer .avatar img {
     display: inline-block;
     width: 90px;
     height: 90px;
@@ -56,7 +56,7 @@
     padding: 10px 20px;
     line-height: 38px;
 }
-.answerer .answerer-info text{
+.answerer .answerer-info text,.answerer .answerer-info span{
     display: block;
 }
 .answerer .answerer-info .answerer-name{
@@ -72,7 +72,7 @@
     padding: 15px 0;
     font-size: 22px;
 }
-.answerer .follow text{
+.answerer .follow text,.answerer .follow span{
     display: inline-block;
     padding: 15px 20px;
     color: #40bcd0;
@@ -83,12 +83,12 @@
     padding: 30px 40px;
     background: #ffffff;
 }
-.answer-content text{
+.answer-content text,.answer-content span{
     font-size: 32px;
     color: #454545;
     line-height: 44px;
 }
-.answer-content image{
+.answer-content image,.answer-content img{
     width: 100%;
     margin: 20px 0;
 }
@@ -113,7 +113,7 @@
 .answer-footer .good .good-bad{
     display: inline-block;
 }
-.answer-footer .good image{
+.answer-footer .good image,.answer-footer .good img{
     display: inline-block;
     width: 38px;
     height: 38px;
@@ -135,13 +135,13 @@
     flex: 1;
     text-align: center;
 }
-.answer-footer .operation image{
+.answer-footer .operation image,.answer-footer .operation img{
     display: block;
     margin: 0 auto;
     width: 50px;
     height: 50px;
 }
-.answer-footer .operation-btn text{
+.answer-footer .operation-btn text,.answer-footer .operation-btn span{
     display: block;
     font-size: 14px;
     color: #bebebe;

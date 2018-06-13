@@ -3,16 +3,16 @@ import { View, Text,ScrollView,Image,Swiper,SwiperItem} from '@tarojs/components
 import './discovery.scss'
 import searchPng from '../../asset/images/search.png'
 import lightingPng from '../../asset/images/lighting.png'
+import Feed from '../../components/feed/feed.js'
 
 import img1 from '../../asset/images/24213.jpg'
 import img2 from '../../asset/images/24280.jpg'
 import img3 from '../../asset/images/1444983318907-_DSC1826.jpg'
-
 import img4 from '../../asset/images/icon1.jpeg'
 import img5 from '../../asset/images/icon8.jpg'
 import img6 from '../../asset/images/icon9.jpeg'
 
-export default class Index extends Component {
+export default class Discovery extends Component {
   config = {
     navigationBarTitleText: '发现'
   }
@@ -158,44 +158,12 @@ export default class Index extends Component {
                       autoplay="true" interval="5000" duration="500">
                 {this.state.imgUrls.map((item,index) => {
                   return (<SwiperItem key={index}>
-                    <Image src={item} className="slide-image" width="355" height="155" />
+                    <Image src={item} className="slide-image" width="355" />
                   </SwiperItem>)
                 })}
               </Swiper>
               {this.state.feed.map((item,index)=>{
-                return <View className="feed-item" key={index}>
-                  <View className="feed-source">
-                    <View >
-                      <View className="avatar">
-                        <image src={item.feed_source_img}></image>
-                      </View>
-                      <Text>{item.feed_source_name}</Text>
-                    </View>
-                  </View>
-                  <View className="feed-content">
-                    <View className="question">
-                      <View className="question-link">
-                        <Text>{item.question}</Text>
-                      </View>
-                    </View>
-                    <View class="answer-body">
-                      <View bindtap="bindItemTap">
-                        <Text className="answer-txt">{item.answer_ctnt}</Text>
-                      </View>
-                      <View class="answer-actions">
-                        <View className="like dot">
-                          <View>{item.good_num} 赞同 </View>
-                        </View>
-                        <View className="comments dot">
-                          <View>{item.comment_num} 评论 </View>
-                        </View>
-                        <View className="follow-it">
-                          <View>关注问题</View>
-                        </View>
-                      </View>
-                    </View>
-                  </View>
-                </View>
+                return  <Feed {...item} />
               })}
           </View>
             <View className="txcenter" hidden={this.state.currentNavtab==1 ? false : true}>

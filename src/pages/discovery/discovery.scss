@@ -11,17 +11,18 @@
   box-shadow: 0 2px 2px #bebebe;
   margin: 0 0 8px 0;
   z-index: 9999;
+
+  .active {
+    color: #ffffff;
+    border-bottom: solid 2px #ffffff;
+  }
 }
 
-.toptab.active{
-  color: #ffffff;
-  border-bottom: solid 2px #ffffff;
-}
 .activity{
   width: 750px;
   height: 375px;
 }
-.activity image{
+.activity image,.activity img{
   width: 750px;
   height: 375px;
 }

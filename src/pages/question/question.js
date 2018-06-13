@@ -8,7 +8,7 @@ import img3 from '../../asset/Images/invite.png'
 import img4 from '../../asset/Images/write.png'
 import img5 from '../../asset/Images/icon1.jpeg'
 
-export default class Index extends Component {
+export default class Question extends Component {
   config = {
     navigationBarTitleText: '问题'
   }
@@ -29,7 +29,7 @@ export default class Index extends Component {
   }
   render () {
     return (
-        <View className="container">
+        <View>
           <View className="question-wrp">
               <View className="question-item">
                   <View className="que-tag">
