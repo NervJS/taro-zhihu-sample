@@ -1,0 +1,49 @@
+.container{
+  height: 1500px;
+  padding: 0;
+  font-size: 14px;
+  background: #F0F4F3;
+  color: #000;
+
+  .search{
+    width: 100%;
+    height: 90px;
+    padding: 12.5px 0 12.5px 15px;
+    background: #2A8CE5;
+
+    .search-left {
+      height: 65px;
+      flex: 8;
+      background: #4EA3E7;
+      text-align: left;
+
+      & image,img {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        padding: 15px 15px 15px 20px;
+      }
+
+      & input {
+        display: inline-block;
+        height: 65px;
+        font-size: 26px;
+      }
+    }
+
+    .search-right {
+      flex: 1;
+      height: 65px;
+      & image,img {
+        width: 45px;
+        height: 45px;
+        padding: 10px;
+      }
+    }
+  }
+
+  .search-placeholder {
+    color: #8CCEFD;
+    line-height: 20px;
+  }
+}
