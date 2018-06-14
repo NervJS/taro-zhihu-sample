@@ -79,7 +79,7 @@ export default class Question extends Component {
                           <View className="avatar">
                               <Image src={img5}></Image>
                           </View>
-                          <Text>Rebecca</Text>
+                          <Text className="answer-name">Rebecca</Text>
                       </View>
                   </View>
                   <View className="feed-content">
@@ -107,7 +107,7 @@ export default class Question extends Component {
                           <View className="avatar">
                               <Image src={img5}></Image>
                           </View>
-                          <Text>Rebecca</Text>
+                          <Text className="answer-name">Rebecca</Text>
                       </View>
                   </View>
                   <View className="feed-content">

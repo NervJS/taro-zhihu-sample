@@ -34,7 +34,7 @@ export default class More extends Component {
         <View className="more">
           <View className="user flex-wrp">
             <View className="avatar flex-item">
-              <Image className="userinfo-avatar" src={defaultAvatarJpeg} backgroundSize="cover"></Image>
+              <Image className="userinfo-avatar" src="https://image.ibb.co/nKV5Cy/default_avatar.jpg" backgroundSize="cover"></Image>
             </View>
             <View className="user-info flex-item">
               <Text className="userinfo-nickname">阿集</Text>
