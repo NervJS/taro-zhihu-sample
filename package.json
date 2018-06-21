@@ -10,13 +10,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@tarojs/components": "0.0.49",
-    "@tarojs/router": "^0.0.40",
-    "@tarojs/taro": "^0.0.40",
-    "@tarojs/taro-h5": "^0.0.40",
-    "@tarojs/taro-weapp": "0.0.40",
-    "nervjs": "^1.2.18",
-    "taro": "0.0.7"
+    "@tarojs/components": "0.0.50",
+    "@tarojs/router": "0.0.50",
+    "@tarojs/taro": "0.0.50",
+    "@tarojs/taro-h5": "0.0.50",
+    "@tarojs/taro-weapp": "0.0.50",
+    "nervjs": "^1.2.18"
   },
   "devDependencies": {
     "@tarojs/plugin-babel": "^0.0.40",

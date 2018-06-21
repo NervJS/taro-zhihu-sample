@@ -27,18 +27,18 @@ class App extends Component {
       borderStyle: "white",
       list: [{
         pagePath: "pages/index/index",
-        text: "",
+        text: "首页",
         iconPath: "./asset/images/index.png",
         selectedIconPath: "./asset/images/index_focus.png"
       },{
         pagePath: "pages/discovery/discovery",
-        text: "",
+        text: "发现",
         iconPath: "./asset/images/discovery.png",
         selectedIconPath: "./asset/images/discovery_focus.png"
       }, 
       {
         pagePath: "pages/more/more",
-        text: "",
+        text: "我的",
         iconPath: "./asset/images/burger.png",
         selectedIconPath: "./asset/images/burger_focus.png"
       }]

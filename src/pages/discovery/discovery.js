@@ -122,12 +122,12 @@ export default class Discovery extends Component {
             "comment_num": "18"
         }
       ],
-    };
+    }
   }
   switchTab(index,e) {
     this.setState({
       currentNavtab: index
-    });
+    })
   }
   
   componentWillMount () { }
@@ -148,7 +148,7 @@ export default class Discovery extends Component {
         {
           this.state.navTab.map((item,index) => {
             return (<View className={this.state.currentNavtab === index ? 'toptab flex-item active' : 'toptab flex-item' } key={index} onClick={this.switchTab.bind(this,index)}>
-              {item.toString()}
+              {item}
             </View>)
           })
         }

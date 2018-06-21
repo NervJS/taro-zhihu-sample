@@ -60,15 +60,12 @@ export default class Index extends Component {
       }
     })
   }
-  mytest() {
-    console.log("test");
-  }
   render () {
     return (<ScrollView className='container'
-        scroll-y
-        scroll-with-animation
-        scroll-top='0'
-        lower-threshold='10'
+        scrollY
+        scrollWithAnimation
+        scrollTop='0'
+        lowerThreshold='10'
         upperThreshold='10'
         onScrolltoupper={this.appendNextPageList}
         onScrolltolower={this.appendNextPageList}
@@ -77,7 +74,7 @@ export default class Index extends Component {
           <View className="search-left flex-item">
               <View className="flex-wrp">
                 <View className="flex1"><Image src={searchPng}></Image></View>
-                <View className="flex6"><Input type="text" placeholder={"搜索话题, 问题或人"} placeholderClass="search-placeholder"/></View>
+                <View className="flex6"><Input type="text" placeholder="搜索话题, 问题或人" placeholderClass="search-placeholder"/></View>
               </View>
           </View>
           <View className="search-right flex-item">
