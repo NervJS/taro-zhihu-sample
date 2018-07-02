@@ -67,26 +67,21 @@ export default class Index extends Component {
         scrollTop='0'
         lowerThreshold='10'
         upperThreshold='10'
-        onScrolltoupper={this.appendNextPageList}
+        onScrolltoupper={()=>{Taro.navigateTo("page/index")}}
         onScrolltolower={this.appendNextPageList}
         >
         <View className="search flex-wrp">
           <View className="search-left flex-item">
               <View className="flex-wrp">
                 <View className="flex1"><Image src={searchPng}></Image></View>
-                <View className="flex6"><Input type="text" placeholder="搜索话题, 问题或人" placeholderClass="search-placeholder"/></View>
+                <View className="flex6"><Input type="text" placeholder={"搜索话题, 问题或人"} placeholderClass="search-placeholder"/></View>
               </View>
           </View>
           <View className="search-right flex-item">
               <Image src={lightingPng}></Image>
           </View>
         </View>
-        {
-          this.state.loading 
-          ? <View className="txcenter"><Text>加载中</Text></View>
-          : this.state.list.map((item,index)=>{
-          return <Feed {...item} key={index} />})
-        }
+        
       </ScrollView>
     )
   }

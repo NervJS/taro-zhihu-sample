@@ -164,7 +164,7 @@ export default class Discovery extends Component {
                 })}
               </Swiper>
               {this.state.feed.map((item,index)=>{
-                return  <Feed {...item} />
+                return  <Feed key={item} />
               })}
           </View>
             <View className="txcenter" hidden={this.state.currentNavtab==1 ? false : true}>
