@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View,Image,Text } from '@tarojs/components'
+import more from '../../asset/images/more.png'
 export default class Feed extends Component {
   navigateTo(url) {
     Taro.navigateTo({url:url})
