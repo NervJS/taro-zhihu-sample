@@ -7,6 +7,9 @@ export default class Feed extends Component {
   navigateTo(url) {
     Taro.navigateTo({url:url})
   }
+  handleClick() {
+      console.log("click")
+  }
   render() {
     return (
       <View className="feed-item">
@@ -22,14 +25,14 @@ export default class Feed extends Component {
           </View>
         </View>
         <View className="feed-content">
-            <View className="question" onClick={this.navigateTo.bind(this,'/pages/question/question')}>
+                <View className="question" onClick={this.handleClick}>
                 <View className="question-link">
                     <Text>{this.props.question}</Text>
                 </View>
             </View>
             <View className="answer-body">
                 <View>
-                    <Text className="answer-txt" onClick={this.navigateTo.bind(this,'/pages/answer/answer')} >{this.props.answer_ctnt}</Text>
+                        <Text className="answer-txt" onClick={this.handleClick} >{this.props.answer_ctnt}</Text>
                 </View>
                 <View className="answer-actions">
                     <View className="like dot">

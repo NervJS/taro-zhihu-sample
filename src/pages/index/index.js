@@ -20,20 +20,26 @@ export default class Index extends Component {
       list:[]
     }
   }
-  componentWillMount () { }
-
   componentDidMount () { 
     // 获取远程数据
-    this.updateList()
+    Taro.showLoading({ title: '加载中' })
+    Taro.request({
+      url: 'https://easy-mock.com/mock/5b21d97f6b88957fa8a502f2/example/feed'
+    }).then(res => {
+      Taro.hideLoading()
+      if (res.data.success) {
+        this.setState({
+          loading: false,
+          list: res.data.data
+        })
+      }
+    })
   }
-
-  componentWillUnmout () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-  
   updateList() {
+    if (this.state.loading) {
+      return
+    }
+    this.state.loading = true
     Taro.showLoading({title: '加载中'})
     Taro.request({
       url: 'https://easy-mock.com/mock/5b21d97f6b88957fa8a502f2/example/feed'
@@ -48,6 +54,10 @@ export default class Index extends Component {
     })
   }
   appendNextPageList() {
+    if (this.state.loading) {
+      return
+    }
+    this.state.loading = true
     Taro.showLoading({title: '加载中'})
     Taro.request({
       url: 'https://easy-mock.com/mock/5b21d97f6b88957fa8a502f2/example/feed'
@@ -55,7 +65,8 @@ export default class Index extends Component {
       Taro.hideLoading()
       if (res.data.success) {
         this.setState({
-          list: this.state.list.concat(res.data.data)
+          list: this.state.list.concat(res.data.data),
+          loading: false
         })
       }
     })
@@ -67,7 +78,8 @@ export default class Index extends Component {
         scrollTop='0'
         lowerThreshold='10'
         upperThreshold='10'
-        onScrolltoupper={()=>{Taro.navigateTo("page/index")}}
+        style="height:300px"
+        onScrolltoupper={this.updateList}
         onScrolltolower={this.appendNextPageList}
         >
         <View className="search flex-wrp">
@@ -78,10 +90,16 @@ export default class Index extends Component {
               </View>
           </View>
           <View className="search-right flex-item">
-              <Image src={lightingPng}></Image>
+            <Image onClick={this.updateList} src={lightingPng}></Image>
           </View>
         </View>
-        
+        {
+          this.state.loading 
+          ? <View className="txcenter">加载中</View>
+          : this.state.list.map(item => {
+            return <Feed key={item}/>
+          })
+        }
       </ScrollView>
     )
   }
