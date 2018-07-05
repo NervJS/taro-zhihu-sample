@@ -15,15 +15,6 @@ export default class Question extends Component {
   constructor() {
     super(...arguments)
   }
-  componentWillMount () { }
-
-  componentDidMount () { }
-
-  componentWillUnmout () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
   navigateTo(url) {
     Taro.navigateTo({url:url})
   }
