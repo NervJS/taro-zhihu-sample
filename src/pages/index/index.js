@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text,ScrollView,Input,Image} from '@tarojs/components'
 import './index.scss'
-import Feed from '../../components/feed/feed.js'
+import Feed from '../../components/feed/feed'
 import searchPng from '../../asset/images/search.png'
 import lightingPng from '../../asset/images/lighting.png'
 import icon1 from '../../asset/images/icon1.jpeg'
@@ -20,7 +20,7 @@ export default class Index extends Component {
       list:[]
     }
   }
-  componentDidMount () { 
+  componentDidMount () {
     // 获取远程数据
     Taro.showLoading({ title: '加载中' })
     Taro.request({
@@ -35,7 +35,7 @@ export default class Index extends Component {
       }
     })
   }
-  updateList() {
+  updateList = () => {
     if (this.state.loading) {
       return
     }
@@ -53,7 +53,7 @@ export default class Index extends Component {
       }
     })
   }
-  appendNextPageList() {
+  appendNextPageList = () => {
     if (this.state.loading) {
       return
     }
@@ -94,10 +94,20 @@ export default class Index extends Component {
           </View>
         </View>
         {
-          this.state.loading 
+          this.state.loading
           ? <View className="txcenter">加载中</View>
-          : this.state.list.map(item => {
-            return <Feed key={item}/>
+          : this.state.list.map((item, index) => {
+            return (
+              <Feed
+                key={`index_${index}`}
+                feed_source_img={item.feed_source_img}
+                feed_source_name={item.feed_source_name}
+                feed_source_txt={item.feed_source_txt}
+                question={item.question}
+                good_num={item.good_num}
+                comment_num={item.comment_num}
+                answer_ctnt={item.answer_ctnt} />
+            )
           })
         }
       </ScrollView>
