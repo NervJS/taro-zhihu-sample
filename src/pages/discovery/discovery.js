@@ -147,8 +147,18 @@ export default class Discovery extends Component {
                   </SwiperItem>)
                 })}
               </Swiper>
-              {this.state.feed.map((item,index)=>{
-                return  <Feed key={item} />
+              {this.state.feed.map((item, index)=>{
+                return (
+                  <Feed
+                    key={`dis_${index}`}
+                    feed_source_img={item.feed_source_img}
+                    feed_source_name={item.feed_source_name}
+                    feed_source_txt={item.feed_source_txt}
+                    question={item.question}
+                    good_num={item.good_num}
+                    comment_num={item.comment_num}
+                    answer_ctnt={item.answer_ctnt} />
+                )
               })}
           </View>
             <View className='txcenter' hidden={this.state.currentNavtab==1 ? false : true}>

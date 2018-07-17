@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View,ScrollView,Input,Image} from '@tarojs/components'
 import './index.scss'
-import Feed from '../../components/feed/feed.js'
+import Feed from '../../components/feed/feed'
 import searchPng from '../../asset/images/search.png'
 import lightingPng from '../../asset/images/lighting.png'
 
@@ -31,7 +31,7 @@ export default class Index extends Component {
       }
     })
   }
-  updateList() {
+  updateList = () => {
     if (this.state.loading) {
       return
     }
@@ -49,7 +49,7 @@ export default class Index extends Component {
       }
     })
   }
-  appendNextPageList() {
+  appendNextPageList = () => {
     if (this.state.loading) {
       return
     }

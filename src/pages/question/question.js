@@ -2,11 +2,11 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, Text,Image} from '@tarojs/components'
 import './question.scss'
 
-import img1 from '../../asset/Images/eye.png'
-import img2 from '../../asset/Images/comment2.png'
-import img3 from '../../asset/Images/invite.png'
-import img4 from '../../asset/Images/write.png'
-import img5 from '../../asset/Images/icon1.jpeg'
+import img1 from '../../asset/images/eye.png'
+import img2 from '../../asset/images/comment2.png'
+import img3 from '../../asset/images/invite.png'
+import img4 from '../../asset/images/write.png'
+import img5 from '../../asset/images/icon1.jpeg'
 
 export default class Question extends Component {
   config = {
