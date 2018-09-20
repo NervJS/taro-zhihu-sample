@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text,ScrollView,Image,Swiper,SwiperItem} from '@tarojs/components'
 import './discovery.scss'
-import Feed from '../../components/feed/feed.js'
+import Feed from '../../components/feed/feed'
 
 import img1 from '../../asset/images/24213.jpg'
 import img2 from '../../asset/images/24280.jpg'
