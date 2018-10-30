@@ -88,8 +88,8 @@ export default class Index extends Component {
           lowerThreshold='10'
           upperThreshold='10'
           style='height:300px'
-          onScrolltoupper={this.updateList}
-          onScrolltolower={this.appendNextPageList}
+          onScrollToUpper={this.updateList}
+          onScrollToLower={this.appendNextPageList}
         >
         {
           this.state.loading
