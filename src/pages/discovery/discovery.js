@@ -151,13 +151,13 @@ export default class Discovery extends Component {
                 return (
                   <Feed
                     key={`dis_${index}`}
-                    feed_source_img={item.feed_source_img}
-                    feed_source_name={item.feed_source_name}
-                    feed_source_txt={item.feed_source_txt}
+                    feedSourceImg={item.feed_source_img}
+                    feedSourceName={item.feed_source_name}
+                    feedSourceTxt={item.feed_source_txt}
                     question={item.question}
-                    good_num={item.good_num}
-                    comment_num={item.comment_num}
-                    answer_ctnt={item.answer_ctnt} />
+                    goodNum={item.good_num}
+                    commentNum={item.comment_num}
+                    answerCtnt={item.answer_ctnt} />
                 )
               })}
           </View>

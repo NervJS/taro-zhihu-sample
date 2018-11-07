@@ -1,41 +1,42 @@
 {
-	"name": "taro_zhihu",
-	"version": "1.0.0",
-	"private": true,
-	"description": "taro 练手项目",
-	"main": "index.js",
-	"scripts": {
-		"build:weapp": "taro build --type weapp",
-		"build:h5": "taro build --type h5",
-		"dev:weapp": "npm run build:weapp -- --watch",
-		"dev:h5": "npm run build:h5 -- --watch",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "",
-	"license": "MIT",
-	"dependencies": {
-		"@tarojs/components": "1.1.2",
-		"@tarojs/router": "1.1.2",
-		"@tarojs/taro": "1.1.2",
-		"@tarojs/taro-h5": "1.1.2",
-		"@tarojs/taro-weapp": "1.1.2",
-		"nervjs": "^1.3.1"
-	},
-	"devDependencies": {
-		"@tarojs/plugin-babel": "1.1.2",
-		"@tarojs/plugin-csso": "1.1.2",
-		"@tarojs/plugin-sass": "1.1.2",
-		"@tarojs/plugin-uglifyjs": "1.1.2",
-		"@tarojs/webpack-runner": "1.1.2",
-		"babel-eslint": "^8.2.5",
-		"babel-plugin-transform-class-properties": "^6.24.1",
-		"babel-plugin-transform-decorators-legacy": "^1.3.4",
-		"babel-plugin-transform-object-rest-spread": "^6.26.0",
-		"babel-preset-env": "^1.6.1",
-		"eslint": "^4.19.1",
-		"eslint-config-taro": "1.1.2",
-		"eslint-plugin-react": "^7.8.2",
-		"eslint-plugin-import": "^2.12.0",
-		"eslint-plugin-taro": "1.1.2"
-	}
+  "name": "taro_zhihu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "taro 练手项目",
+  "main": "index.js",
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "build:h5": "taro build --type h5",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tarojs/components": "1.1.2",
+    "@tarojs/router": "1.1.2",
+    "@tarojs/taro": "1.1.2",
+    "@tarojs/taro-h5": "1.1.2",
+    "@tarojs/taro-swan": "^1.1.2",
+    "@tarojs/taro-weapp": "1.1.2",
+    "nervjs": "^1.3.1"
+  },
+  "devDependencies": {
+    "@tarojs/plugin-babel": "1.1.2",
+    "@tarojs/plugin-csso": "1.1.2",
+    "@tarojs/plugin-sass": "1.1.2",
+    "@tarojs/plugin-uglifyjs": "1.1.2",
+    "@tarojs/webpack-runner": "1.1.2",
+    "babel-eslint": "^8.2.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-taro": "1.1.2",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-taro": "1.1.2"
+  }
 }

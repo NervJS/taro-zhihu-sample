@@ -97,13 +97,13 @@ export default class Index extends Component {
           : this.state.list.map(item => {
             return <Feed
               key={item}
-              feed_source_img={item.feed_source_img}
-              feed_source_name={item.feed_source_name}
-              feed_source_txt={item.feed_source_txt}
+              feedSourceImg={item.feed_source_img}
+              feedSourceName={item.feed_source_name}
+              feedSourceTxt={item.feed_source_txt}
               question={item.question}
-              answer_ctnt={item.answer_ctnt}
-              good_num={item.good_num}
-              comment_num={item.comment_num}
+              answerCtnt={item.good_num}
+              goodNum={item.comment_num}
+              commentNum={item.commentNum}
             />
           })
         }
