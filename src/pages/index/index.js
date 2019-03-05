@@ -94,9 +94,9 @@ export default class Index extends Component {
         {
           this.state.loading
           ? <View className='txcenter'>加载中</View>
-          : this.state.list.map(item => {
+          : this.state.list.map((item, key) => {
             return <Feed
-              key={item}
+              key={key}
               feedSourceImg={item.feed_source_img}
               feedSourceName={item.feed_source_name}
               feedSourceTxt={item.feed_source_txt}
