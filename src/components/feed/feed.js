@@ -1,10 +1,11 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
+import React from 'react'
 import { View,Image,Text } from '@tarojs/components'
 import more from '../../asset/images/more.png'
 
 import './feed.scss'
 
-export default class Feed extends Component {
+export default class Feed extends React.Component {
   navigateTo(url) {
     Taro.navigateTo({url:url})
   }

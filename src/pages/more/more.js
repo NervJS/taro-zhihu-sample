@@ -1,4 +1,4 @@
-import Taro, { Component } from '@tarojs/taro'
+import React from 'react'
 import { View, Text,Image} from '@tarojs/components'
 import './more.scss'
 
@@ -11,7 +11,7 @@ import livePng from '../../asset/images/live.png'
 import zhiPng from '../../asset/images/zhi.png'
 
 
-export default class More extends Component {
+export default class More extends React.Component {
   config = {
     navigationBarTitleText: '我的'
   }
@@ -30,7 +30,7 @@ export default class More extends Component {
         <View className='my'>
           <View className='my-item flex-wrp'>
             <View className='myitem-icon flex-item' >
-            <Image class='myitem-img' src={eyePng}></Image>
+            <Image className='myitem-img' src={eyePng}></Image>
             </View>
             <View className='myitem-name flex-item'>
               <Text>我的关注</Text>
@@ -38,7 +38,7 @@ export default class More extends Component {
           </View>
           <View className='my-item flex-wrp'>
             <View className='myitem-icon flex-item' >
-            <Image class='myitem-img' src={starPng}></Image>
+            <Image className='myitem-img' src={starPng}></Image>
             </View>
             <View className='myitem-name flex-item'>
               <Text>我的收藏</Text>
@@ -46,7 +46,7 @@ export default class More extends Component {
           </View>
           <View className='my-item flex-wrp'>
             <View className='myitem-icon flex-item' >
-            <Image class='myitem-img' src={draftPng}></Image>
+            <Image className='myitem-img' src={draftPng}></Image>
             </View>
             <View className='myitem-name flex-item'>
               <Text>我的草稿</Text>
@@ -54,7 +54,7 @@ export default class More extends Component {
           </View>
           <View className='my-item flex-wrp'>
             <View className='myitem-icon flex-item' >
-            <Image class='myitem-img' src={recentPng}></Image>
+            <Image className='myitem-img' src={recentPng}></Image>
             </View>
             <View className='myitem-name flex-item'>
               <Text>最近浏览</Text>
@@ -62,7 +62,7 @@ export default class More extends Component {
           </View>
           <View className='my-item flex-wrp'>
             <View className='myitem-icon flex-item' >
-            <Image class='myitem-img' src={bookPng}></Image>
+            <Image className='myitem-img' src={bookPng}></Image>
             </View>
             <View className='myitem-name flex-item'>
               <Text>我的书架</Text>
@@ -70,7 +70,7 @@ export default class More extends Component {
           </View>
           <View className='my-item flex-wrp'>
             <View className='myitem-icon flex-item' >
-            <Image class='myitem-img' src={livePng}></Image>
+            <Image className='myitem-img' src={livePng}></Image>
             </View>
             <View className='myitem-name flex-item'>
               <Text>我的 Live</Text>
@@ -78,7 +78,7 @@ export default class More extends Component {
           </View>
           <View className='my-item flex-wrp'>
             <View className='myitem-icon flex-item' >
-            <Image class='myitem-img' src={zhiPng}></Image>
+            <Image className='myitem-img' src={zhiPng}></Image>
             </View>
             <View className='myitem-name flex-item'>
               <Text>我的值乎</Text>

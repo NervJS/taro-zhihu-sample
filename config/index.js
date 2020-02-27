@@ -17,6 +17,7 @@ const config = {
       ]
     },
   },
+  framework: 'react',
   defineConstants: {
   },
   weapp: {

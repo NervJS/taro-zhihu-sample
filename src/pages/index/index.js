@@ -1,14 +1,12 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
+import React from 'react'
 import { View,ScrollView,Input,Image} from '@tarojs/components'
 import './index.scss'
 import Feed from '../../components/feed/feed'
 import searchPng from '../../asset/images/search.png'
 import lightingPng from '../../asset/images/lighting.png'
 
-export default class Index extends Component {
-  config = {
-    navigationBarTitleText: '首页'
-  }
+export default class Index extends React.Component {
   constructor() {
     super(...arguments)
     this.state = {
@@ -35,7 +33,9 @@ export default class Index extends Component {
     if (this.state.loading) {
       return
     }
-    this.state.loading = true
+    this.setState({
+      loading: true
+    })
     Taro.showLoading({title: '加载中'})
     Taro.request({
       url: 'https://easy-mock.com/mock/5b21d97f6b88957fa8a502f2/example/feed'
@@ -53,7 +53,9 @@ export default class Index extends Component {
     if (this.state.loading) {
       return
     }
-    this.state.loading = true
+    this.setState({
+      loading: true
+    })
     Taro.showLoading({title: '加载中'})
     Taro.request({
       url: 'https://easy-mock.com/mock/5b21d97f6b88957fa8a502f2/example/feed'

@@ -1,4 +1,4 @@
-import Taro, { Component } from '@tarojs/taro'
+import React from 'react'
 import { View, Text,ScrollView,Image,Swiper,SwiperItem} from '@tarojs/components'
 import './discovery.scss'
 import Feed from '../../components/feed/feed'
@@ -10,10 +10,7 @@ import img4 from '../../asset/images/icon1.jpeg'
 import img5 from '../../asset/images/icon8.jpg'
 import img6 from '../../asset/images/icon9.jpeg'
 
-export default class Discovery extends Component {
-  config = {
-    navigationBarTitleText: '发现'
-  }
+export default class Discovery extends React.Component {
   constructor() {
     super(...arguments)
     this.state = {
@@ -120,7 +117,7 @@ export default class Discovery extends Component {
       ],
     }
   }
-  switchTab(index,e) {
+  switchTab(index, e) {
     this.setState({
       currentNavtab: index
     })
@@ -139,8 +136,7 @@ export default class Discovery extends Component {
         </View>
         <ScrollView scroll-y className='container discovery withtab'>
           <View className='ctnt0' hidden={this.state.currentNavtab==0 ? false : true}>
-              <Swiper className='activity' indicatorDots='true'
-                      autoplay='true' interval='5000' duration='500'>
+              <Swiper className='activity' indicatorDots='true' autoplay interval='5000' duration='500'>
                 {this.state.imgUrls.map((item,index) => {
                   return (<SwiperItem key={index}>
                     <Image src={item} className='slide-image' width='355' height='375' />

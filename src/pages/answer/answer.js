@@ -1,4 +1,5 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
+import React from 'react'
 import { View, Text, Image } from '@tarojs/components'
 import './answer.scss'
 
@@ -11,10 +12,7 @@ import img6 from '../../asset/images/comment.png'
 import img7 from '../../asset/images/icon1.jpeg'
 
 
-export default class Answer extends Component {
-    config = {
-        navigationBarTitleText: '答案'
-    }
+export default class Answer extends React.Component {
     constructor() {
         super(...arguments)
     }
