@@ -1,19 +1,13 @@
-import React from 'react'
+import Vue from 'vue'
 import './app.scss'
 
-class App extends React.Component {
-  componentDidMount () {}
-
-  componentDidShow () {}
-
-  componentDidHide () {}
-
-  componentCatchError () {}
-
-  render () {
-    return this.props.children
+const app = new Vue({
+  onShow (options) {
+    console.log('app onshow', options)
+  },
+  render(h) {
+    return h('block', this.$slots.default)
   }
-}
+})
 
-export default App
-
+export default app

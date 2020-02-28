@@ -17,7 +17,7 @@ const config = {
       ]
     },
   },
-  framework: 'react',
+  framework: 'vue',
   defineConstants: {
   },
   weapp: {

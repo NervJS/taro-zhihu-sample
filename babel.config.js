@@ -1,8 +1,8 @@
 module.exports = {
   presets: [
     ['taro', {
-      framework: 'react',
-      ts: true
+      framework: 'vue',
+      ts: false
     }]
   ]
 }

@@ -1,19 +1,62 @@
-import React from 'react'
-import { View, Text,ScrollView,Image,Swiper,SwiperItem} from '@tarojs/components'
-import './discovery.scss'
-import Feed from '../../components/feed/feed'
+<template>
+  <view>
+      <view class='top-tab flex-wrp flex-tab'>
+        <view
+          v-for="(item, index) in navTab"
+          :key="index"
+          :class="currentNavtab === index ? 'toptab flex-item active' : 'toptab flex-item'"
+          @tap="switchTab(index)"
+        >
+          {{item}}
+        </view>
+      </view>
+      <scroll-view scroll-y class='container discovery withtab'>
+        <view class='ctnt0' :hidden="currentNavtab==0 ? false : true">
+            <swiper class='activity' indicatorDots='true' autoplay interval='5000' duration='500'>
+              <swiper-item v-for="item in imgUrls" :key="item">
+                  <image :src='item' class='slide-image' width='355' height='375' />
+              </swiper-item>
+            </swiper>
+            <feed
+              v-for="(item, index) in feed"
+              :key="index"
+              :feed-source-img='item.feed_source_img'
+              :feed-source-name='item.feed_source_name'
+              :feed-source-txt='item.feed_source_txt'
+              :question='item.question'
+              :answer-ctnt='item.good_num'
+              :good-num='item.comment_num'
+              :comment-num='item.commentNum'
+            />
+        </view>
+          <view class='txcenter' :hidden='currentNavtab==1 ? false : true'>
+            <text>圆桌</text>
+          </view>
+          <view class='txcenter' :hidden='currentNavtab==2 ? false : true'>
+            <text>热门</text>
+          </view>
+          <view class='txcenter' :hidden='currentNavtab==3 ? false : true'>
+            <text>收藏</text>
+          </view>
+      </scroll-view>
+    </view>
+</template>
 
+<script>
+import './discovery.scss'
+import Feed from '../../components/feed/feed.vue'
 import img1 from '../../asset/images/24213.jpg'
 import img2 from '../../asset/images/24280.jpg'
 import img3 from '../../asset/images/1444983318907-_DSC1826.jpg'
 import img4 from '../../asset/images/icon1.jpeg'
 import img5 from '../../asset/images/icon8.jpg'
 import img6 from '../../asset/images/icon9.jpeg'
-
-export default class Discovery extends React.Component {
-  constructor() {
-    super(...arguments)
-    this.state = {
+export default {
+  components: {
+    feed: Feed
+  },
+  data () {
+    return {
       imgUrls: [img1,img2,img3],
       currentNavtab: 0,
       navTab: ['推荐', '圆桌', '热门', '收藏'],
@@ -116,59 +159,15 @@ export default class Discovery extends React.Component {
         }
       ],
     }
-  }
-  switchTab(index, e) {
-    this.setState({
-      currentNavtab: index
-    })
-  }
-  render () {
-    return (
-      <View>
-        <View className='top-tab flex-wrp flex-tab' >
-        {
-          this.state.navTab.map((item,index) => {
-            return (<View className={this.state.currentNavtab === index ? 'toptab flex-item active' : 'toptab flex-item' } key={index} onClick={this.switchTab.bind(this,index)}>
-              {item}
-            </View>)
-          })
-        }
-        </View>
-        <ScrollView scroll-y className='container discovery withtab'>
-          <View className='ctnt0' hidden={this.state.currentNavtab==0 ? false : true}>
-              <Swiper className='activity' indicatorDots='true' autoplay interval='5000' duration='500'>
-                {this.state.imgUrls.map((item,index) => {
-                  return (<SwiperItem key={index}>
-                    <Image src={item} className='slide-image' width='355' height='375' />
-                  </SwiperItem>)
-                })}
-              </Swiper>
-              {this.state.feed.map((item, index)=>{
-                return (
-                  <Feed
-                    key={`dis_${index}`}
-                    feedSourceImg={item.feed_source_img}
-                    feedSourceName={item.feed_source_name}
-                    feedSourceTxt={item.feed_source_txt}
-                    question={item.question}
-                    goodNum={item.good_num}
-                    commentNum={item.comment_num}
-                    answerCtnt={item.answer_ctnt} />
-                )
-              })}
-          </View>
-            <View className='txcenter' hidden={this.state.currentNavtab==1 ? false : true}>
-              <Text>圆桌</Text>
-            </View>
-            <View className='txcenter' hidden={this.state.currentNavtab==2 ? false : true}>
-              <Text>热门</Text>
-            </View>
-            <View className='txcenter' hidden={this.state.currentNavtab==3 ? false : true}>
-              <Text>收藏</Text>
-            </View>
-        </ScrollView>
-      </View>
-    )
+  },
+  methods: {
+    switchTab(index, e) {
+      this.currentNavtab = index
+    }
   }
 }
+</script>
 
+<style>
+
+</style>
