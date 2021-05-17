@@ -4,23 +4,10 @@ const config = {
   designWidth: 750,
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: {
-    babel: {
-      sourceMap: true,
-      presets: [
-        'env'
-      ],
-      plugins: [
-        'transform-class-properties',
-        'transform-decorators-legacy',
-        'transform-object-rest-spread'
-      ]
-    },
-  },
   framework: 'react',
   defineConstants: {
   },
-  weapp: {
+  mini: {
 
   },
   h5: {
