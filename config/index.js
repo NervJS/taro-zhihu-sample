@@ -13,11 +13,9 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
-    module: {
-      postcss: {
-        autoprefixer: {
-          enable: true
-        }
+    postcss: {
+      autoprefixer: {
+        enable: true
       }
     }
   }
